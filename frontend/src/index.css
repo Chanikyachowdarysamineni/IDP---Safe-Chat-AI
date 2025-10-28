@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 7%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 7%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Deep indigo for security/trust */
+    --primary: 263 70% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 263 70% 60%;
+
+    /* Muted purple tones */
+    --secondary: 240 10% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 10% 12%;
+    --muted-foreground: 240 5% 64.9%;
+
+    /* Cyan accent for modern tech */
+    --accent: 189 92% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Danger red */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Warning amber */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Success green */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    /* Emotion colors */
+    --emotion-anger: 0 84% 60%;
+    --emotion-joy: 45 93% 47%;
+    --emotion-sadness: 217 91% 60%;
+    --emotion-fear: 271 76% 53%;
+    --emotion-disgust: 142 76% 36%;
+    --emotion-surprise: 280 87% 65%;
+
+    --border: 240 10% 18%;
+    --input: 240 10% 18%;
+    --ring: 263 70% 50%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(263 70% 50%), hsl(263 70% 60%));
+    --gradient-danger: linear-gradient(135deg, hsl(0 84% 60%), hsl(0 84% 70%));
+    --gradient-warning: linear-gradient(135deg, hsl(38 92% 50%), hsl(38 92% 60%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 46%));
+    
+    /* Shadows with glow */
+    --shadow-glow: 0 0 20px hsl(263 70% 50% / 0.3);
+    --shadow-danger: 0 0 20px hsl(0 84% 60% / 0.3);
+    --shadow-warning: 0 0 20px hsl(38 92% 50% / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
